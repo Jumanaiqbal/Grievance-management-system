@@ -45,8 +45,6 @@ The **Grievance Management System** is a web application that allows users to su
    ```bash
    git clone https://github.com/your-repo/grievance-management-system.git
 ### Usage
-Once the backend and frontend servers are running, you can access the application at http://localhost:3000.
-
 Login/Register: Customers, supervisors, and assignees can register and log in to access the system based on their roles.
 Submit Grievance: Logged-in customers can submit grievances.
 Assign Grievances: Supervisors can view all grievances and assign them to assignees.
