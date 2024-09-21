@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Grievance Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The **Grievance Management System** is a web application that allows users to submit grievances, supervisors to manage grievances, and assignees to update grievance statuses. It is built with a Spring Boot backend and a React frontend.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Installation and Setup](#installation-and-setup)
+4. [Usage](#usage)
+5. [Endpoints](#endpoints)
+6. [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Customer**:
+  - Submit grievances.
+  - View submitted grievances.
+- **Supervisor**:
+  - View all unassigned grievances.
+  - Assign grievances to assignees.
+  - Filter grievances by category.
+- **Assignee**:
+  - View assigned grievances.
+  - Update grievance status (resolved/pending).
+- Authentication and role-based access control with Spring Security.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **Backend**: Spring Boot, Spring Data JPA, Spring Security
+- **Frontend**: React, Axios
+- **Database**: PostgreSQL
+- **Build Tool**: Maven
+- **Dependencies**:
+  - Spring Boot Starter Web
+  - Spring Boot Starter Data JPA
+  - Spring Boot Starter Security
+  - Lombok
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/grievance-management-system.git
+### Usage
+Once the backend and frontend servers are running, you can access the application at http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Login/Register: Customers, supervisors, and assignees can register and log in to access the system based on their roles.
+Submit Grievance: Logged-in customers can submit grievances.
+Assign Grievances: Supervisors can view all grievances and assign them to assignees.
+Update Status: Assignees can update the status of grievances they have been assigned.
+### Endpoints
+Authentication
+-POST /api/v1/user/login: Login for users.
+-POST /api/v1/user/signup: Register a new user.
+Grievance Management
+-POST /api/v1/grievances: Submit a new grievance.
+-GET /api/v1/grievances: View grievances based on role (Customer, Supervisor, Assignee).
+-PUT /api/v1/grievances/{id}/assign: Assign a grievance to an assignee (Supervisor only).
+-PUT /api/v1/grievances/{id}/status: Update grievance status (Assignee only).
+-GET /api/v1/grievances/filter: Filter grievances by category (Supervisor only).
+### License
+This project is licensed under the MIT License.
