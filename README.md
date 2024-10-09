@@ -27,15 +27,17 @@ The **Grievance Management System** is a web application that allows users to su
 
 ## Technologies Used
 
-- **Backend**: Spring Boot, Spring Data JPA, Spring Security
-- **Frontend**: React, Axios
-- **Database**: PostgreSQL
-- **Build Tool**: Maven
-- **Dependencies**:
-  - Spring Boot Starter Web
-  - Spring Boot Starter Data JPA
-  - Spring Boot Starter Security
-  - Lombok
+- **Java 22**: Programming language for backend development.
+- **Spring Boot 3.3.3**: Framework for building REST APIs and managing application configurations.
+  - **Spring Boot Starter Web**: For creating REST APIs.
+  - **Spring Boot Starter Data JPA**: For database interactions using JPA.
+  - **Spring Boot Starter Security**: For authentication and authorization.
+- **PostgreSQL**: Database for storing application data.
+- **Lombok**: Reduces boilerplate code in Java.
+- **Spring Security**: For managing security features such as login and role-based access control.
+- **JUnit & Spring Security Test**: For unit and integration testing.
+- **Maven**: Build automation and dependency management.
+
 
 ## Installation and Setup
 
