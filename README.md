@@ -43,9 +43,18 @@ The **Grievance Management System** is a web application that allows users to su
 
 ### Backend
 
-1. Clone the repository:
+### Prerequisites
+Before you begin, ensure you have the following installed on your system:
+- **Java 22** (Ensure JAVA_HOME is correctly set)
+- **Maven** (for managing dependencies)
+- **PostgreSQL** (for the database)
+- **Git** (to clone the repository)
+
+### Step 1: Clone the Repository
+1. Open a terminal and navigate to the directory where you want to store your project.
+2. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/grievance-management-system.git
+   git clone https://github.com/your-username/your-repo-name.git
 ### Usage
 Login/Register: Customers, supervisors, and assignees can register and log in to access the system based on their roles.
 Submit Grievance: Logged-in customers can submit grievances.
