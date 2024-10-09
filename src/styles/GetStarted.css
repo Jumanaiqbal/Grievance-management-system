@@ -1,0 +1,114 @@
+/* src/styles/GetStarted.css */
+/* Import Podkova from Google Fonts for both body and heading */
+@import url('https://fonts.googleapis.com/css2?family=Podkova:wght@400;600&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Podkova', serif;  /* Use Podkova for the entire body */
+    background: linear-gradient(135deg, #1e1e2f 0%, #34344f 100%);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.get-started {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                 /* Full height of the viewport */
+    text-align: center;            /* Center content */
+}
+
+.main-heading {
+    font-family: 'Podkova', serif; /* Use Podkova for the main heading */
+    font-size: 3.5rem;             /* Larger heading */
+    font-weight: 600;              /* Bold text */
+    color: #ffffff;                /* Bright white */
+    margin-bottom: 10px;           /* Space below the heading */
+    transform: translate(10px, -60px); /* Moves 50px left and 30px up */
+    position: relative;
+}
+
+/* Color specifically for "ABC Electronics" */
+.abc-electronics {
+    color: turquoise;                /* Change color for "ABC Electronics" (gold/yellow) */
+}
+
+.abc-electronics:hover {
+    color: rgb(243, 241, 244);                /* Change color for "ABC Electronics"  */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;             /* Larger max width for a more open feel */
+    padding: 0 40px;               /* Add padding for breathing room */
+    margin-top: 10px;              /* Reduce space between heading and content */
+}
+
+.text-container {
+    flex: 1;
+    text-align: left;              /* Left-align text */
+}
+
+/* Line and dot for the animated text */
+.line-dot-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;              /* Space above the line and dot */
+}
+
+.line {
+    width: 150px;
+    height: 2px;
+    background-color: #41FFEC;     /* Line color */
+    margin-right: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #41FFEC;     /* Dot color */
+    border-radius: 50%;            /* Make it a circle */
+    margin-right: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;        /* Keep Join Us text above buttons */
+    align-items: flex-end;
+}
+
+.join-us-text {
+    font-size: 2rem;             /* Font size for Join Us text */
+    margin-bottom: 10px;           /* Space below the text */
+    color: turquoise;                /* Change color for Join Us (gold/yellow) */
+
+}
+
+.buttons-row {
+    display: flex;                  /* Align buttons side by side */
+    gap: 20px;                     /* Space between buttons */
+}
+
+.btn {
+    background-color: transparent;  /* Make the button background transparent */
+    color: white;                   /* Text color */
+    padding: 15px 40px;             /* Button padding */
+    border: 2px solid turquoise;        /* White border */
+    border-radius: 30px;           /* Rounded, pill-shaped buttons */
+    font-size: 1.1rem;              /* Font size */
+    font-weight: 600;               /* Bold button text */
+    cursor: pointer;                /* Pointer cursor */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly white background on hover */
+    transform: translateY(-5px);   /* Slight lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}

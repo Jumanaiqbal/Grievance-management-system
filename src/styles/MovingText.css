@@ -1,0 +1,14 @@
+/* src/styles/MovingText.css */
+.moving-text {
+    font-size: 2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

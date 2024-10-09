@@ -10,6 +10,7 @@ import Register from './components/Register';
 import UserDashboard from './components/UserDashboard';
 import AssigneeDashboard from './components/AssigneeDashboard';
 import SupervisorDashboard from './components/SupervisorDashboard';
+import GetStarted from './components/GetStarted';
 import './styles/App.css';
 
 const App = () => {
@@ -35,6 +36,9 @@ const App = () => {
 	return (
 		<Router>
 			<Routes>
+				{/* Landing page with GetStarted component */}
+				<Route path="/" element={<GetStarted />} /> {/* Set GetStarted as landing page */}
+
 				{/* Login page, sets isLoggedIn and userRole on success */}
 				<Route
 					path='/login'
@@ -69,7 +73,7 @@ const App = () => {
 
 				{/* Redirect to appropriate dashboard if logged in */}
 				<Route
-					path='/'
+					path='/dashboard'
 					element={
 						isLoggedIn ? (
 							<Navigate to={`/${userRole.toLowerCase()}-dashboard`} />
